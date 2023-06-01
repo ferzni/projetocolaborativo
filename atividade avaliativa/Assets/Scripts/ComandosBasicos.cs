@@ -125,5 +125,13 @@ public class ComandosBasicos : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        if (collision.gameObject.tag == "potion")
+        {
+            quantidadeVidas += 1;
+
+            textovida.text = quantidadeVidas.ToString();
+
+            Destroy(collision.gameObject);
+        }
     }
 }
